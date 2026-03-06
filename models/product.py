@@ -6,6 +6,6 @@ from .base import Base
 class Product(Base):
     __tablename__ = "products"
 
-    name: Mapped[str]
+    name: Mapped[str]  # mapped чтобы скать что это колонки
     description: Mapped[str]
     price: Mapped[int]
