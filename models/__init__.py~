@@ -1,4 +1,0 @@
-__all__ = ()
-
-from .base import Base
-from .product import Product
