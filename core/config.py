@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 class Settings(BaseSettings):
-    api_v1_prefix = "/api/v1"
+    api_v1_prefix: str = "/api/v1"
     app_name: str
     debug: bool
     db_url: str
