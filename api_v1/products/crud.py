@@ -34,6 +34,8 @@ async def create_product(session: AsyncSession, product_in: ProductCreate) -> Pr
 async def update_product(session: AsyncSession, product: Product, product_update: ProductUpdate) -> Product:
     for name, value in product_update.model_dump().items():
         setattr(product, name, value)
+        await session.commit()
+        return product
 
 
 
